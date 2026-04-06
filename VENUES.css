@@ -1,0 +1,206 @@
+/* PAGE */
+
+.venues-page {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0f2fe, #f0fdf4);
+  padding: 40px;
+}
+
+/* CONTAINER */
+
+.venues-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER */
+
+.venues-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.venues-top h2 {
+  margin: 0;
+}
+
+/* BUTTON GROUP */
+
+.venues-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* ACTION BUTTON */
+
+.venues-actions {
+  margin-bottom: 15px;
+}
+
+.btn-add {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* TABLE */
+
+.venues-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.venues-table th {
+  background: #f1f5f9;
+  padding: 12px;
+  text-align: left;
+}
+
+.venues-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.venues-table tr:hover {
+  background: #f9fafb;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+}
+
+/* TABLE BUTTONS */
+
+.btn-edit {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-back {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* POPUP */
+/*
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 340px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: popup 0.25s ease;
+} */
+
+.modal-box {
+  width: 50vh;
+  max-width: 300px;
+  height: 30vh;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* INPUT */
+
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* MODAL BUTTONS */
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #9ca3af;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,255 @@
+.schedule-wrapper {
+  width: 100%;
+  margin-top: 105px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-date-display {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+.schedule-container {
+  display: flex;
+  width: 95%;
+  max-width: 100%;
+  height: 425px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* LEFT COLUMN */
+.left-column {
+  width: 160px;
+  min-width: 160px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+
+.left-column::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.left-header {
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: 700;
+  font-size: 16px;
+  background: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.left-game {
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* RIGHT SCROLL AREA */
+.right-scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  background: #ffffff;
+}
+
+/* TIME HEADER */
+.time-row {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 15;
+}
+
+.time-slot {
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  border-right: 1px solid #eee;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+/* FIXTURE ROW */
+.fixture-row {
+  display: flex;
+  position: relative;
+  height: 64px;
+  min-height: 64px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.fixture-cell {
+  height: 64px;
+  min-height: 64px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+/* FIXTURE BLOCK */
+.fixture-block {
+  position: absolute;
+  top: 10px;
+  height: 44px;
+  background: #d9e9ff;
+  border: 1px solid #c4dcff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #1b1b1b;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 5;
+  overflow: hidden;
+  user-select: none;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.fixture-block:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- POPUP OVERLAY ---------- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* ---------- POPUP CARD ---------- */
+.popup-card {
+  background: #ffffff;
+  width: 330px;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.2s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.popup-card h2 {
+  margin: 0 0 12px;
+}
+
+.popup-close {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #007bff;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* POPUP ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* FLOATING CARD */
+.floating-card {
+  position: absolute;
+  width: 220px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 5000;
+  animation: floatIn 0.15s ease-out;
+  box-sizing: border-box;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CLOSE X BUTTON */
+.close-x {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.close-x:hover {
+  color: #000000;
+  transform: scale(1.15);
+}

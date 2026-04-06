@@ -1,0 +1,58 @@
+.upload-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
+  margin-top: 80px;
+  text-align: center;
+  width: 400px;
+}
+
+.upload-card h2 {
+  color: #1b8f4b;
+  margin-bottom: 25px;
+}
+
+.file-display {
+  border: 2px dashed #bbb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.file-display.has-file {
+  border-color: #1abc9c;
+  background-color: #e6fff2;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.select-button,
+.upload-button {
+  flex: 1;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-button:hover,
+.upload-button:hover {
+  background-color: #16a085;
+}
