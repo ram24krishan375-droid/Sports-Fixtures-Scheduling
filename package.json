@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "lucide": "^0.554.0",
+    "lucide-react": "^0.554.0",
+    "react-to-print": "^3.2.0"
+  }
+}
